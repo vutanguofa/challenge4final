@@ -1,3 +1,7 @@
+// initial score for quiz
+var score = 0;
+
+// object for questions, choices, and answer
 var questions = [
     {
         question: "1. What is the most current Street Figher title?",
@@ -31,8 +35,8 @@ var questions = [
     },
     {
         question: "7. Who played Guile in the Street Fighter live action game?",
-        choices: ["Bruce Willis", "Brad Pitt", "Tom Cruise", "Jean-Claude Van Damme"],
-        correctAnswer: 3,
+        choices: ["Bruce Willis", "Jean-Claude Van Damme", "Brad Pitt", "Tom Cruise"],
+        correctAnswer: 1,
     },
     {
         question: "8. Street Fighter V is available on: ?",
@@ -51,19 +55,42 @@ var questions = [
     },
 ];
 
-
+/*
 for (var i = 0; i < questions.length; i++) {
     // Logs the animal at index position i to the console. This code is executed each we go through the loop.
     console.log(questions[i]);
 }
-
-/*
-function questionList() {
-    for (var i = 0; i < questions.length; i++) {
-        //console.log(questions[0]);
-        console.log(questions[0])
-    }
-}
-
-questionList();
 */
+
+// function to display questions
+function questionsList() {
+    for (var i = 0; i < questions.length; i++) {
+        // Display current question to user and ask OK/Cancel
+        var displayQuestion = questions[i].question;
+        console.log("Question: " + displayQuestion);
+    }
+};
+
+// function to display choices
+function choicesList() {
+    for (var i = 0; i < questions.length; i++) {
+        // Display current question to user and ask OK/Cancel
+        var displayChoices = questions[i].choices;
+        console.log("Choices: " + displayChoices);
+    }
+};
+
+
+// function to display answers
+function answersList() {
+    for (var i = 0; i < questions.length; i++) {
+        // Display current question to user and ask OK/Cancel
+        var correctAnswer = questions[i].correctAnswer;
+        console.log("Correct answer : " + correctAnswer);
+    }
+};
+
+
+questionsList();
+choicesList();
+answersList();
