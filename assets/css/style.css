@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: #ca4327;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  header {
+    padding: 20px 35px;
+    background-color: #c19556;
+  }
+  
+  header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #ca4327;
+    margin: 0;
+    display: inline;
+  }
+
+/* Hero Style Start */
+.hero {
+    background-image: url('../images/sfhero.jpg');
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+/* Hero Style End */
+    
+section {
+    padding: 15px;
+    align-content: center;
+}
+  
+button {
+    background-color: #ca4327;
+    border: none;
+    color: #c19556;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+
+.question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+button{
+  font-family: 'Work Sans', sans-serif;
+	font-size: 22px;
+	background-color: #ca4327;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+button:hover{
+	background-color: #c19556;
+}
+
+footer {
+    background: #c19556;
+    width: 100%;
+    padding: 40px 35px;
+}
