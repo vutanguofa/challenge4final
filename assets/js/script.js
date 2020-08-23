@@ -142,7 +142,6 @@
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
       if (userAnswer === currentQuestion.correctAnswer) {
         numCorrect++;
-        answerContainers[questionNumber].style.color = 'lightgreen';
       }
       else {
         answerContainers[questionNumber].style.color = 'red';
@@ -233,3 +232,49 @@ function countdown() {
   }, 1000);
 };
 // end of countdown section
+
+// store score to local storage
+var playerInput = document.querySelector("#player");
+var scoreInput = document.querySelector("#score");
+var submitScore = document.querySelector("#submit-score");
+var msgDiv = document.querySelector("#msg");
+var playerSpan = document.querySelector("#playerInitials");
+var scoreSpan = document.querySelector("#playerScore");
+
+
+function previousScore() {
+  var email = localStorage.getItem("player");
+  var password = localStorage.getItem("score");
+
+  if (email && password === null) {
+    return;
+  }
+
+  playerSpan.textContent = email;
+  scoreSpan.textContent = password;
+}
+
+previousScore();
+
+function displayMessage(type, message) {
+  msgDiv.textContent = message;
+  msgDiv.setAttribute("class", type);
+}
+
+
+submitScore.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  var email = document.querySelector("#player").value;
+  var password = document.querySelector("#score").value;
+
+  if (email === "") {
+    displayMessage("error", "Initials cannot be blank");
+  } else {
+    displayMessage("success", "Your score and initials were added!");
+
+    localStorage.setItem("player", email);
+    localStorage.setItem("score", password);
+    previousScore();
+  }
+});

@@ -48,7 +48,7 @@ button {
     font-size: 16px;
 }
 
-.slide{
+.slide {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -57,30 +57,35 @@ button {
   opacity: 0;
   transition: opacity 0.5s;
 }
-.active-slide{
+
+.active-slide { 
   opacity: 1;
   z-index: 2;
 }
-.quiz-container{
+
+.quiz-container { 
   position: relative;
   height: 200px;
   margin-top: 40px;
 }
 
-.question{
+.question {
   font-size: 30px;
   margin-bottom: 10px;
 }
+
 .answers {
   margin-bottom: 20px;
   text-align: left;
   display: inline-block;
 }
-.answers label{
+
+.answers label {
   display: block;
   margin-bottom: 10px;
 }
-button{
+
+button {
   font-family: 'Work Sans', sans-serif;
 	font-size: 22px;
 	background-color: #ca4327;
@@ -91,8 +96,13 @@ button{
 	cursor: pointer;
 	margin-bottom: 20px;
 }
+
 button:hover{
 	background-color: #c19556;
+}
+
+.button-score {
+  padding-top: 20px;
 }
 
 footer {

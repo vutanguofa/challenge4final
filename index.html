@@ -17,20 +17,56 @@
 
     <!-- start of main section -->
     <main>
+        <!-- Start of hero section -->
         <section class="hero"></section>
         <section>
             <h2>Time</h2>
             <div id="countdown"></div>
         </section>
-        <section class="quiz-container">
-            <div id="quiz"></div>
-        </section>
+        <!-- End of quiz section -->
+
+        <!-- Start of quiz section -->
         <section>
+            <div class="quiz-container" id="quiz"></div>
             <button id="previous">Previous Question</button>
             <button id="next">Next Question</button>
             <button id="submit">Submit Quiz</button>
-            <div id="results"></div>
         </section>
+        <!-- End of quiz section -->
+
+        <!-- Start initials and show score section -->
+        <section>
+            <div">
+                <h2>Your Score</h2>
+                <div id="results"></div>
+                <form method="POST">
+                    <div>
+                        <label for="initials">Enter initials</label>
+                        <input type="text" name="player" id="player" maxlength="3" placeholder="JDS" />
+                    </div>
+                    <div>
+                        <label for="score">Score</label>
+                        <input type="text" name="score" id="score" maxlength="2"/>
+                    </div>
+                    <div id="msg" class="button-score"></div>
+                    <p>
+                        <button id="submit-score">Enter</button>
+                    </p>
+                </form>
+            </div>
+        </section>
+        <!-- End of initials and show score section -->
+
+        <!-- Start of previous score section-->
+        <section>
+            <div>
+                <h2>Previous Score</h2>
+                <p><strong>Player</strong> <span id="playerInitials"></span></p>
+                <p><strong>Score</strong> <span id="playerScore"></span></p>
+            </div>
+            <!-- End of previous score section-->
+        </section>
+
     </main>
     <!-- end of main section -->
 
