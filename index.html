@@ -21,7 +21,7 @@
         <section class="hero"></section>
         <section>
             <h2>Time</h2>
-            <div id="countdown"></div>
+            <div id="countdown" class="count-down"></div>
         </section>
         <!-- End of quiz section -->
 
@@ -38,20 +38,8 @@
         <section>
             <div">
                 <h2>Your Score</h2>
-                <div id="results"></div>
-                <form method="POST">
-                    <div>
-                        <label for="initials">Enter initials</label>
-                        <input type="text" name="player" id="player" maxlength="3" placeholder="JDS" />
-                    </div>
-                    <div>
-                        <label for="score">Score</label>
-                        <input type="text" name="score" id="score" maxlength="2"/>
-                    </div>
-                    <div id="msg" class="button-score"></div>
-                    <p>
-                        <button id="submit-score">Enter</button>
-                    </p>
+                <div id="msg" class="button-score"></div>
+                <div id="results" class="result-block"></div>
                 </form>
             </div>
         </section>
